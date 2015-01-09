@@ -23,7 +23,33 @@ var hot = '#e60000'
 var dead = '#3c3c3c'
 var win = '#8002a0'
 
+// Load a random phrase.
+
 $(window).load(randomize());
+
+
+var random2 = 0;
+
+var randomize2 = function(){
+	random2 = Math.floor((Math.random() * 10) + 1);
+}
+
+$(window).load(randomize2());
+
+var phrase = "";
+if (random2 == 1) phrase = "Forget it, Jake. It&rsquo;s Chinatown.";
+if (random2 == 2) phrase = "You really need a different hobby.";
+if (random2 == 3) phrase = "Who's the dumb algorithm now, bitch?";
+if (random2 == 4) phrase = "Why oh why didn't I take the blue pill?";
+if (random2 == 5) phrase = "Ah, the festering stench of defeat.";
+if (random2 == 6) phrase = "Excuse me while I kiss the sky.";
+if (random2 == 7) phrase = "You're going to need a bigger boat.";
+if (random2 == 8) phrase = "And so we beat on, boats against the current, borne ceaselessly into the past.";
+if (random2 == 9) phrase = "That's what I&rsquo;M talking about.";
+if (random2 == 10) phrase = "Awww, did Schroedinger&rsquo;s kitty get a boo boo?";
+
+
+
 
 
 // The user should have an input field where they can submit a guess.
@@ -143,7 +169,7 @@ function submitNumber(){
 			$jumbotron.css('background', dead);
 			$('h4').css('visibility', 'hidden');
 			$('h1').replaceWith('<h1>' + 'YOU LOSE!!' + '<br>' + '&nbsp;' + '</h1>');
-			$('#higherOrLower').replaceWith('<p id="higherOrLower">' + '&nbsp;' + '</p>');
+			$('#higherOrLower').replaceWith('<p id="higherOrLower">' + phrase + '</p>');
 			temperature = dead;
 			$('#progress').css('visibility', 'hidden');
 			// Hide submit button
@@ -157,7 +183,7 @@ function submitNumber(){
 			$jumbotron.css('background', win);
 			$('h4').css('visibility', 'hidden');
 			$('h1').replaceWith('<h1>' + 'You got it right!' + '<br>' + '&nbsp;' + '</h1>');
-			$('#higherOrLower').replaceWith('<p id="higherOrLower">' + '&nbsp;' + '</p>');
+			$('#higherOrLower').replaceWith('<p id="higherOrLower">' + phrase + '</p>');
 			temperature = win;
 			$('#progress').css('visibility', 'hidden');
 			$('#submitButton').css('visibility', 'hidden');
