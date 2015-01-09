@@ -37,9 +37,11 @@ Jumbotron settings
 .container-fluid .jumbotron {
   border-radius: 18px;
   background: #00ae5e;
+  padding-bottom: 20px;
 }
 
 body {
+  padding-top: 30px;
 	color: #ffffff;
 }
 
@@ -49,8 +51,8 @@ Button
 
 .btn-success {
   color: #fff;
-  background-color: #009e54;
-  border-color: #009d54;
+  background-color: rgba(0,0,0,0.1);
+  border-color: rgba(0,0,0,0.15);
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -59,8 +61,8 @@ Button
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #fff;
-  background-color: #09985a;
-  border-color: #398439;
+  background-color: rgba(0,0,0,0.2);
+  border-color: rgba(0,0,0,0.3);
 }
 
 .btn-outOf5 {
@@ -77,3 +79,28 @@ Button
   text-align: center;
   border-radius: 30px;
 }
+
+#trackingText {
+  text-align: center;
+  visibility: hidden;
+  color: #000000;
+}
+
+#centeredColoredText {
+  color: #595959;
+  text-align: center;
+  visibility: hidden;
+}
+
+.badge {
+  background: #00ae5e
+}
+
+input {
+  border-color: rgba(0,0,0,0.15);
+}
+
+#progress {
+  padding-top: 10px;
+}
+

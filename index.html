@@ -23,7 +23,6 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,40 +38,60 @@
 
       <div class="jumbotron">
         <h1>Pick a number between 1 and 100.</h1>
+        <p id="higherOrLower">&nbsp;</p>
         <p>
           <form>
               <div class="row">
                 <div class="col-xs-4 col-xs-offset-4">
                   <div class="form-group"> 
                     <label class="sr-only" for="numberInput">(Number)</label>
-                    <input type="number" class="form-control input-lg" placeholder="..." id="numberInput">
+                    <div id="invalidEntry" container="body"><div id="matching" container="body"><input type="number" class="form-control input-lg" placeholder="..." id="numberInput"></div>
                   </div>
                 </div>
               </div>
+            </div>
           </form>
         </p>
-        <div class="row">
-          <div class="col-xs-2">
-            <a class="btn btn-lg btn-success" href="#" role="button">Submit</a>
+        <p>
+          <div class="row">
+            <div class="col-xs-2" id="submitButton">
+              <a class="btn btn-lg btn-success" href="#" role="button">Submit</a>
+            </div>
+            <div class="col-xs-4 col-xs-offset-2">
+              <p id="progress">0 out of 5</p>
+            </div>
+            <div class="col-xs-2">
+              <a class="btn  btn-success btn-circle" href="#" role="button"  title="Start over" id="startOver"><span class="glyphicon glyphicon-repeat" aria-hidden="true" aria-label="Start over"></span></a>
+            </div>
+            <div class="col-xs-2">
+              <button type="button" class="btn  btn-success btn-circle" href="#" role="button" title="Get hint"id="hint">?</button>
+            </div>
           </div>
-          <div class="col-xs-4 col-xs-offset-2">
-            <a class="btn btn-lg btn-outOf5" href="#" role="button">0 out of 5</a>
-          </div>
-          <div class="col-xs-2">
-            <a class="btn  btn-success btn-circle" href="#" role="button""  title="Start over"><span class="glyphicon glyphicon-repeat" aria-hidden="true" aria-label="Start over"></a>
-          </div>
-          <div class="col-xs-2">
-            <a class="btn  btn-success btn-circle" href="#" role="button" title="Get hint">?</a>
-          </div>
+        </p>
+      </div>
+
+      <div id="hideThis">
+        <div class="col-lg-6" id="centeredColoredText">
+          <h4>Let's put some text right here, shall we?</h4>
         </div>
       </div>
 
+      <div class="col-lg-6">
+        <p id="trackingText">Guesses: &nbsp;</p>
+      </div>
+        
+  
       
 
     </div> <!-- /container -->
+ 
+    <!-- jQuery plus my code — replace jQuery with CDN link before deployment -->
+
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  
   </body>
 </html>
